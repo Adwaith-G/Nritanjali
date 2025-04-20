@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="css/owl.carousel.min.css">
   <link rel="stylesheet" href="css/owl.theme.default.min.css">
   <link rel="stylesheet" href="css/tooplate-style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 
   <style>
     .gallery-img-wrapper {
@@ -25,12 +26,15 @@
     .gallery-img-wrapper:hover img {
       transform: scale(1.05);
     }
+    .about-text, .about-image, .contact, .project, .gallery-img-wrapper, .footer {
+      animation-duration: 1.5s;
+    }
   </style>
 </head>
 <body>
 
 <!-- Navigation -->
-<nav class="navbar navbar-expand-sm navbar-light shadow-sm">
+<nav class="navbar navbar-expand-sm navbar-light shadow-sm animate__animated animate__fadeInDown">
   <div class="container">
     <a class="navbar-brand font-weight-bold" href="#">Nritanjali School of Dance</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
@@ -52,14 +56,14 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-7 col-md-12 d-flex align-items-center">
-        <div class="about-text">
+        <div class="about-text animate__animated animate__fadeInLeft">
           <h1 class="mb-3">Nritanjali School of Dance</h1>
           <h4 class="mb-4 text-muted">Preserving Tradition, Inspiring Creativity</h4>
           <p>Located in Chathamangalam, Nritanjali is a premier institution dedicated to classical and contemporary performing arts. We provide structured training in Bharatanatyam, Kuchipudi, Mohiniyattam, Semi-Classical, Western Dance, and Carnatic Music. Our mission is to instill discipline, creativity, and cultural pride in each student.</p>
         </div>
       </div>
       <div class="col-lg-5 col-md-12">
-        <div class="about-image">
+        <div class="about-image animate__animated animate__fadeInRight">
           <img src="images/1.jpg" class="img-fluid rounded shadow" alt="Dance Illustration">
         </div>
       </div>
@@ -69,42 +73,42 @@
 
 <!-- Courses Section -->
 <section class="project py-5 bg-light" id="courses">
-  <div class="container text-center">
+  <div class="container text-center animate__animated animate__fadeInUp">
     <h2 class="mb-4">Our Courses</h2>
     <p class="mb-5 text-muted">Explore a wide range of classical and modern art forms suitable for all ages and skill levels.</p>
-
     <div class="row">
-      <div class="col-md-4 mb-4">
+      <!-- Each card can optionally have fadeIn effect -->
+      <div class="col-md-4 mb-4 animate__animated animate__fadeInUp">
         <div class="p-4 shadow rounded bg-white">
           <h5>Bharatanatyam</h5>
           <p>One of the oldest classical dance forms rooted in devotion and tradition.</p>
         </div>
       </div>
-      <div class="col-md-4 mb-4">
+      <div class="col-md-4 mb-4 animate__animated animate__fadeInUp">
         <div class="p-4 shadow rounded bg-white">
           <h5>Kuchipudi</h5>
           <p>Known for its elegance, fast rhythms, and expressive storytelling.</p>
         </div>
       </div>
-      <div class="col-md-4 mb-4">
+      <div class="col-md-4 mb-4 animate__animated animate__fadeInUp">
         <div class="p-4 shadow rounded bg-white">
           <h5>Mohiniyattam</h5>
           <p>A graceful dance style from Kerala emphasizing soft movements and expressions.</p>
         </div>
       </div>
-      <div class="col-md-4 mb-4">
+      <div class="col-md-4 mb-4 animate__animated animate__fadeInUp">
         <div class="p-4 shadow rounded bg-white">
           <h5>Semi-Classical</h5>
           <p>Combining classical roots with contemporary flair and rhythm.</p>
         </div>
       </div>
-      <div class="col-md-4 mb-4">
+      <div class="col-md-4 mb-4 animate__animated animate__fadeInUp">
         <div class="p-4 shadow rounded bg-white">
           <h5>Western Dance</h5>
           <p>From Hip-Hop to Bollywood, we teach vibrant modern styles with energy.</p>
         </div>
       </div>
-      <div class="col-md-4 mb-4">
+      <div class="col-md-4 mb-4 animate__animated animate__fadeInUp">
         <div class="p-4 shadow rounded bg-white">
           <h5>Carnatic Music</h5>
           <p>Vocal training in South Indian classical music with emphasis on technique and devotion.</p>
@@ -116,37 +120,38 @@
 
 <!-- Gallery -->
 <section class="project py-5" id="gallery">
-  <div class="container text-center">
+  <div class="container text-center animate__animated animate__fadeIn">
     <h2 class="mb-4">Gallery</h2>
     <p class="mb-5 text-muted">A glimpse into our vibrant performances, classes, and celebrations at Nritanjali.</p>
     <div class="row g-4">
+      <!-- Gallery Images with zoom effect already styled -->
       <div class="col-sm-6 col-md-4">
-        <div class="gallery-img-wrapper">
+        <div class="gallery-img-wrapper animate__animated animate__zoomIn">
           <img src="images/1.jpg" class="img-fluid rounded shadow-sm" alt="Gallery Image 1">
         </div>
       </div>
       <div class="col-sm-6 col-md-4">
-        <div class="gallery-img-wrapper">
+        <div class="gallery-img-wrapper animate__animated animate__zoomIn">
           <img src="images/2.jpg" class="img-fluid rounded shadow-sm" alt="Gallery Image 2">
         </div>
       </div>
       <div class="col-sm-6 col-md-4">
-        <div class="gallery-img-wrapper">
+        <div class="gallery-img-wrapper animate__animated animate__zoomIn">
           <img src="images/3.jpg" class="img-fluid rounded shadow-sm" alt="Gallery Image 3">
         </div>
       </div>
       <div class="col-sm-6 col-md-4">
-        <div class="gallery-img-wrapper">
+        <div class="gallery-img-wrapper animate__animated animate__zoomIn">
           <img src="images/4.jpg" class="img-fluid rounded shadow-sm" alt="Gallery Image 4">
         </div>
       </div>
       <div class="col-sm-6 col-md-4">
-        <div class="gallery-img-wrapper">
+        <div class="gallery-img-wrapper animate__animated animate__zoomIn">
           <img src="images/5.jpg" class="img-fluid rounded shadow-sm" alt="Gallery Image 5">
         </div>
       </div>
       <div class="col-sm-6 col-md-4">
-        <div class="gallery-img-wrapper">
+        <div class="gallery-img-wrapper animate__animated animate__zoomIn">
           <img src="images/6.jpg" class="img-fluid rounded shadow-sm" alt="Gallery Image 6">
         </div>
       </div>
@@ -155,7 +160,7 @@
 </section>
 
 <!-- Contact -->
-<section class="contact py-5 bg-light" id="contact">
+<section class="contact py-5 bg-light animate__animated animate__fadeInUp" id="contact">
   <div class="container">
     <div class="row">
       <div class="col-lg-6 col-12">
@@ -168,7 +173,15 @@
       </div>
       <div class="col-lg-6 col-12">
         <div class="google-map w-100 mb-4">
-          <iframe src="https://www.google.com/maps/embed?pb=..." width="100%" height="300" style="border:0;" allowfullscreen></iframe>
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d125163.84439998401!2d75.76289252521136!3d11.380640066895669!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba643b0d80e7473%3A0x3fbb40afe7879ab6!2sNritanjali%20school%20of%20dance!5e0!3m2!1sen!2sin!4v1745153280063!5m2!1sen!2sin" 
+            width="100%" 
+            height="300" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
         </div>
       </div>
     </div>
@@ -176,7 +189,7 @@
 </section>
 
 <!-- Footer -->
-<footer class="footer py-4 bg-dark text-white">
+<footer class="footer py-4 bg-dark text-white animate__animated animate__fadeInUp">
   <div class="container text-center">
     <p class="mb-1">&copy; 2025 Nritanjali School of Dance. All Rights Reserved.</p>
     <p class="mb-0">Crafted with passion and dedication.</p>
