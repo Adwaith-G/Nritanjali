@@ -2,11 +2,12 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Nritanjali School of Dance - Classical and Contemporary Dance Education">
   <meta name="author" content="Nritanjali School of Dance">
   <title>Nritanjali School of Dance</title>
 
+  <!-- Styles -->
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/unicons.css">
   <link rel="stylesheet" href="css/owl.carousel.min.css">
@@ -15,34 +16,37 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 
   <style>
-    .gallery-img-wrapper {
-      overflow: hidden;
-      border-radius: 15px;
-      transition: transform 0.3s ease;
+    /* Sticky Navbar */
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 1030;
+      background-color: #fff;
     }
-    .gallery-img-wrapper img {
-      transition: transform 0.4s ease;
+
+    .navbar-brand {
+      font-weight: 700;
+      font-size: 1.3rem;
     }
-    .gallery-img-wrapper:hover img {
-      transform: scale(1.05);
+
+    .nav-link {
+      font-weight: 500;
+      color: #333 !important;
     }
-    .about-text, .about-image, .contact, .project, .gallery-img-wrapper, .footer {
-      animation-duration: 1.5s;
+
+    .nav-link:hover {
+      color: #e91e63 !important;
     }
 
     /* Hero Video Styling */
     .main-banner {
       position: relative;
-      width: 100%;
       height: 100vh;
       overflow: hidden;
-      z-index: 0;
     }
 
     #bg-video {
       position: absolute;
-      top: 0;
-      left: 0;
       width: 100%;
       height: 100%;
       object-fit: cover;
@@ -51,11 +55,9 @@
 
     .video-overlay {
       position: absolute;
-      top: 0;
-      left: 0;
       width: 100%;
       height: 100%;
-      background: rgba(0, 0, 0, 0.5);
+      background: rgba(0, 0, 0, 0.55);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -64,43 +66,76 @@
       padding: 2rem;
     }
 
-    .caption h1,
-    .caption p {
+    .video-overlay h1 {
       color: #fff;
-      text-shadow: 1px 1px 4px #000;
+      font-size: 3rem;
+      font-family: 'Georgia', serif;
+      text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
+    }
+
+    .video-overlay p {
+      color: #f8f9fa;
+      font-size: 1.25rem;
+      font-family: 'Georgia', serif;
+      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    .about-text, .gallery-img-wrapper, .contact, .footer {
+      animation-duration: 1.5s;
+    }
+
+    .gallery-img-wrapper {
+      overflow: hidden;
+      border-radius: 15px;
+      transition: transform 0.3s ease;
+    }
+
+    .gallery-img-wrapper img {
+      transition: transform 0.4s ease;
+    }
+
+    .gallery-img-wrapper:hover img {
+      transform: scale(1.05);
+    }
+
+    .footer {
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 768px) {
+      .video-overlay h1 {
+        font-size: 2rem;
+      }
+
+      .video-overlay p {
+        font-size: 1rem;
+      }
     }
   </style>
 </head>
 <body>
 
 <!-- Hero Banner with Video Background -->
-<div class="main-banner" id="top">
+<header class="main-banner" id="top">
   <video autoplay muted loop playsinline id="bg-video" poster="images/1.jpg">
-    <source src="images/dance.mp4" type="video/mp4" />
+    <source src="images/dance.mp4" type="video/mp4">
     Your browser does not support the video tag.
   </video>
-
-  <div class="video-overlay header-text">
-    <div class="caption">
-      <h1 class="mb-4" style="font-family: 'Georgia', serif; font-size: 2.5rem;">
-        Welcome to <strong>Nritanjali School of Dance</strong>
-      </h1>
-      <p class="text-muted" style="font-family: 'Georgia', serif; font-size: 1.1rem;">
-        Celebrating Tradition through Movement and Grace.
-      </p>
-    </div>
+  <div class="video-overlay">
+    <h1>Welcome to <strong>Nritanjali School of Dance</strong></h1>
+    <p>Celebrating Tradition through Movement and Grace</p>
   </div>
-</div>
+</header>
 
 <!-- Navigation -->
-<nav class="navbar navbar-expand-sm navbar-light shadow-sm animate__animated animate__fadeInDown">
+<nav class="navbar navbar-expand-lg navbar-light shadow-sm animate__animated animate__fadeInDown">
   <div class="container">
-    <a class="navbar-brand font-weight-bold" href="#">Nritanjali School of Dance</a>
+    <a class="navbar-brand" href="#">Nritanjali</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav mx-auto">
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav">
         <li class="nav-item"><a class="nav-link" href="#about">About Us</a></li>
         <li class="nav-item"><a class="nav-link" href="#courses">Courses</a></li>
         <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
@@ -110,6 +145,7 @@
     </div>
   </div>
 </nav>
+
 
 <!-- About Section -->
 <section class="about full-screen d-lg-flex justify-content-center align-items-center" id="about">
