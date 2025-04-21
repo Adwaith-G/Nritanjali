@@ -1,412 +1,414 @@
-<!doctype html>
+{% load static %}
+<!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="Nritanjali School of Dance - Classical and Contemporary Dance Education">
-  <meta name="author" content="Nritanjali School of Dance">
-  <title>Nritanjali School of Dance</title>
 
-  <link rel="stylesheet" href="css/bootstrap.min.css">
-  <link rel="stylesheet" href="css/unicons.css">
-  <link rel="stylesheet" href="css/owl.carousel.min.css">
-  <link rel="stylesheet" href="css/owl.theme.default.min.css">
-  <link rel="stylesheet" href="css/tooplate-style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <head>
 
-  <style>
-    /* General Styles */
-    body {
-        font-family: 'Georgia', serif;
-        margin: 0;
-        padding: 0;
-        background-color: #f4f4f4;
-    }
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap" rel="stylesheet">
 
-    /* Hero Video Styling */
-    .main-banner {
-        position: relative;
-        width: 100%;
-        height: 100vh;
-        overflow: hidden;
-        z-index: 0;
-    }
+    <title>Armando user Home</title>
+<!--
 
-    #bg-video {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        z-index: -1;
-    }
+TemplateMo 548 Training Studio
 
-    .video-overlay {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(0, 0, 0, 0.5);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-        text-align: center;
-        padding: 2rem;
-    }
+https://templatemo.com/tm-548-training-studio
 
-    .caption h1,
-    .caption p {
-        color: #fff;
-        text-shadow: 1px 1px 4px #000;
-    }
+-->
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" type="text/css" href="{% static 'user/assets/css/bootstrap.min.css' %}">
 
-    /* Navbar Styling */
-    nav {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        z-index: 10;
-        transition: background-color 0.3s ease-in-out;
-    }
+    <!-- Font Awesome -->
+    <link rel="stylesheet" type="text/css" href="{% static 'user/assets/css/font-awesome.css' %}">
 
-    nav.scrolled {
-        background-color: #333; /* Dark background for visibility */
-    }
-
-    /* Navbar Links */
-    nav a.nav-link {
-        color: #fff; /* White color for text */
-        padding: 15px;
+    <!-- Custom Template CSS -->
+    <link rel="stylesheet" href="{% static 'user/assets/css/templatemo-training-studio.css' %}">
+<!-- FontAwesome CDN (if not already included) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">        
+    <!-- Store Icon Styling -->
+<style>
+    .store-icon {
         display: inline-block;
-        text-decoration: none;
+        font-size: 2rem;
+        color: white;
+        background: rgba(0, 0, 0, 0.5);
+        padding: 15px;
+        border-radius: 50%;
+        transition: all 0.3s ease-in-out;
     }
 
-    nav a.nav-link:hover {
-        color: #f0a500; /* Change color on hover */
-    }
-
-    /* Make Navbar Fixed */
-    body {
-        padding-top: 80px; /* Adjust depending on navbar height */
-    }
-
-    /* Gallery Styling */
-    .gallery-img-wrapper {
-        overflow: hidden;
-        border-radius: 15px;
-        transition: transform 0.3s ease;
-        margin-bottom: 20px;
-    }
-
-    .gallery-img-wrapper img {
-        transition: transform 0.4s ease;
-        width: 100%;
-        height: auto;
-    }
-
-    .gallery-img-wrapper:hover img {
-        transform: scale(1.05);
-    }
-
-    /* About Section */
-    .about-text,
-    .about-image,
-    .contact,
-    .project,
-    .gallery-img-wrapper,
-    .footer {
-        animation-duration: 1.5s;
-    }
-
-    /* Footer Styling */
-    .footer {
-        background-color: #333;
-        color: #fff;
-        padding: 2rem;
-        text-align: center;
-    }
-
-    /* Optional: Adjust footer on mobile */
-    @media (max-width: 768px) {
-        .footer {
-            font-size: 0.9rem;
-        }
+    .store-icon:hover {
+        background: white;
+        color: black;
+        transform: scale(1.1);
     }
 </style>
-</head>
-<body>
 
-<!-- Hero Banner with Video Background -->
-<div class="main-banner" id="top">
-  <video autoplay muted loop playsinline id="bg-video" poster="images/1.jpg">
-    <source src="images/dance.mp4" type="video/mp4" />
-    Your browser does not support the video tag.
-  </video>
-
-  <div class="video-overlay header-text">
-    <div class="caption">
-      <h1 class="mb-4" style="font-family: 'Georgia', serif; font-size: 2.5rem;">
-        Welcome to <strong>Nritanjali School of Dance</strong>
-      </h1>
-      <p class="text-muted" style="font-family: 'Georgia', serif; font-size: 1.1rem;">
-        Celebrating Tradition through Movement and Grace.
-      </p>
-    </div>
-  </div>
-</div>
-
-<!-- Navigation -->
-<nav class="navbar navbar-expand-sm navbar-light shadow-sm animate__animated animate__fadeInDown">
-  <div class="container">
-    <a class="navbar-brand font-weight-bold" href="#">Nritanjali School of Dance</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav mx-auto">
-        <li class="nav-item"><a class="nav-link" href="#about">About Us</a></li>
-        <li class="nav-item"><a class="nav-link" href="#courses">Courses</a></li>
-        <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
-        <li class="nav-item"><a class="nav-link" href="#directors">Directors</a></li>
-        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
-
-<!-- About Section -->
-<section class="about full-screen d-lg-flex justify-content-center align-items-center" id="about">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-7 col-md-12 d-flex align-items-center">
-        <div class="about-text animate__animated animate__fadeInLeft">
-          <h1 class="mb-3">Nritanjali School of Dance</h1>
-          <h4 class="mb-4 text-muted">Preserving Tradition, Inspiring Creativity</h4>
-          <p>Located in Chathamangalam, Nritanjali is a premier institution dedicated to classical and contemporary performing arts. We provide structured training in Bharatanatyam, Kuchipudi, Mohiniyattam, Semi-Classical, Western Dance, and Carnatic Music. Our mission is to instill discipline, creativity, and cultural pride in each student.</p>
-        </div>
-      </div>
-      <div class="col-lg-5 col-md-12">
-        <div class="about-image animate__animated animate__fadeInRight">
-          <img src="images/1.jpg" class="img-fluid rounded shadow" alt="Dance Illustration">
+    </head>
+    
+    <body>
+    
+    <!-- ***** Preloader Start ***** -->
+    <div id="js-preloader" class="js-preloader">
+      <div class="preloader-inner">
+        <span class="dot"></span>
+        <div class="dots">
+          <span></span>
+          <span></span>
+          <span></span>
         </div>
       </div>
     </div>
-  </div>
-</section>
+    <!-- ***** Preloader End ***** -->
+    
+    
+    <!-- ***** Header Area Start ***** -->
+    <header class="header-area header-sticky">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <nav class="main-nav">
+                        <!-- ***** Logo Start ***** -->
+                        <a href="" class="logo">ARMANDO<em> APP</em></a>
+                        <!-- ***** Logo End ***** -->
+                        <!-- ***** Menu Start ***** -->
+                        <ul class="nav">
+                            <li class="scroll-to-section"><a href="#top" class="active">Home</a></li>
+                            <li class="scroll-to-section"><a href="#profile">Profile</a></li>
+                            <li class="scroll-to-section"><a href="#our-classes">Features</a></li>
+                            <li class="scroll-to-section"><a href="{% url 'workout_streak' %}">Workout Streak 🔥</a></li>
+                            <li class="scroll-to-section"><a href="{% url 'product_list' %}">🛒 Armando Cart</a></li> 
+                            <li class="scroll-to-section">
+                                <a href="https://wa.me/7907819095" target="_blank" class="btn btn-success">
+                                    <i class="fab fa-whatsapp"></i> Coach Support
+                                </a>
+                            </li>
+                            <li class="main-button"><a href="{% url 'logout' %}">Logout</a></li>
+                        </ul>        
+                        <a class='menu-trigger'>
+                            <span>Menu</span>
+                        </a>
+                        <!-- ***** Menu End ***** -->
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- ***** Header Area End ***** -->
 
-<!-- Courses Section -->
-<section class="project py-5 bg-light" id="courses">
-  <div class="container text-center animate__animated animate__fadeInUp">
-    <h2 class="mb-4">Our Courses</h2>
-    <p class="mb-5 text-muted">Explore a wide range of classical and modern art forms suitable for all ages and skill levels.</p>
-    <div class="row">
-      <!-- Each course block -->
-      <div class="col-md-4 mb-4 animate__animated animate__fadeInUp">
-        <div class="p-4 shadow rounded bg-white">
-          <h5>Bharatanatyam</h5>
-          <p>One of the oldest classical dance forms rooted in devotion and tradition.</p>
+
+    <!-- Main Banner with Video Background -->
+    <div class="main-banner" id="top">
+        <video autoplay muted loop playsinline id="bg-video" poster="{% static 'user/assets/images/lbg.jpg' %}">
+            <source src="{% static 'home/video1/gok.mp4'  %}" type="video/mp4" />
+            Your browser does not support the video.
+        </video>
+
+        <div class="video-overlay header-text">
+            <div class="caption">
+                <h1 class="text-center mb-4" style="font-family: 'Arial', sans-serif; font-size: 2.5rem; color: white;">
+                    Welcome, {{ user.name }}!
+                </h1>
+                <p class="text-center text-muted" style="font-family: 'Arial', sans-serif; font-size: 1.2rem; color: #e2e2e2;">
+                    We're glad to have you at <strong>Armando Muscle App</strong>.
+                </p>
+
+                <!-- Store Icon -->
+                <div class="text-center mt-4">
+                    <a href="{% url 'product_list' %}" class="store-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                    </a>
+                </div>
+            </div>
         </div>
-      </div>
-      <div class="col-md-4 mb-4 animate__animated animate__fadeInUp">
-        <div class="p-4 shadow rounded bg-white">
-          <h5>Kuchipudi</h5>
-          <p>Known for its elegance, fast rhythms, and expressive storytelling.</p>
-        </div>
-      </div>
-      <div class="col-md-4 mb-4 animate__animated animate__fadeInUp">
-        <div class="p-4 shadow rounded bg-white">
-          <h5>Mohiniyattam</h5>
-          <p>A graceful dance style from Kerala emphasizing soft movements and expressions.</p>
-        </div>
-      </div>
-      <div class="col-md-4 mb-4 animate__animated animate__fadeInUp">
-        <div class="p-4 shadow rounded bg-white">
-          <h5>Semi-Classical</h5>
-          <p>Combining classical roots with contemporary flair and rhythm.</p>
-        </div>
-      </div>
-      <div class="col-md-4 mb-4 animate__animated animate__fadeInUp">
-        <div class="p-4 shadow rounded bg-white">
-          <h5>Western Dance</h5>
-          <p>From Hip-Hop to Bollywood, we teach vibrant modern styles with energy.</p>
-        </div>
-      </div>
-      <div class="col-md-4 mb-4 animate__animated animate__fadeInUp">
-        <div class="p-4 shadow rounded bg-white">
-          <h5>Carnatic Music</h5>
-          <p>Vocal training in South Indian classical music with emphasis on technique and devotion.</p>
-        </div>
-      </div>
     </div>
-  </div>
-</section>
+    <!-- ***** Main Banner Area End ***** -->
 
-<!-- Gallery Section -->
-<section class="project py-5" id="gallery">
-  <div class="container text-center animate__animated animate__fadeIn">
-    <h2 class="mb-4">Gallery</h2>
-    <p class="mb-5 text-muted">A glimpse into our vibrant performances, classes, and celebrations at Nritanjali.</p>
-    <div class="row g-4">
-      <div class="col-sm-6 col-md-4">
-        <div class="gallery-img-wrapper animate__animated animate__zoomIn">
-          <img src="images/1.jpg" class="img-fluid rounded shadow-sm" alt="Gallery Image 1">
+    <!-- Profile Section -->
+    <section class="section" id="profile" style="padding: 40px 0;">
+        <div class="container">
+            {% if admission %}
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <h2 class="text-center mb-4" style="font-weight: bold; color: #333;">Admission Details</h2>
+                        <!-- Centered Photo -->
+                        <div class="text-center mb-4">
+                            <img src="{% if admission and admission.profile_picture %}{{ admission.profile_picture.url }}{% else %}{% static 'user/assets/images/default-profile.png' %}{% endif %}" alt="Profile Picture"
+                                alt="Profile Picture" 
+                                class="img-thumbnail rounded-circle" 
+                                style="width: 150px; height: 150px; object-fit: cover;">
+                        </div>
+                        <!-- Admission Details Table -->
+                        <div class="table-responsive">
+                            <table class="table table-bordered table-striped">
+                                <thead>
+                                    <tr>
+                                        <th colspan="2" class="text-center bg-primary text-white">Admission Details</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th>Name</th>
+                                        <td>{{ admission.name }}</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Email</th>
+                                        <td>{{ admission.email }}</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Phone</th>
+                                        <td>{{ admission.phone }}</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Gender</th>
+                                        <td>{{ admission.get_sex_display }}</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Date of Birth</th>
+                                        <td>{{ admission.dob }}</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Blood Group</th>
+                                        <td>{{ admission.blood_group }}</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Address</th>
+                                        <td>{{ admission.address }}</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Height</th>
+                                        <td>{{ admission.height }}</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Weight</th>
+                                        <td>{{ admission.weight }}</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Medical Issues</th>
+                                        <td>{{ admission.medical_condition}}</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Plan</th>
+                                        <td>{{ admission.plan }}</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Payment Mode</th>
+                                        <td>{{ admission.payment_mode }}</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Pending Amount</th>
+                                        <td>₹{{ admission.pending_amount }}</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Joining Date</th>
+                                        <td>{{ admission.joining_date }}</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Fee Renewal Date</th>
+                                        <td>{{ admission.fee_renewal_date }}</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            {% else %}
+                <div class="row justify-content-center">
+                    <div class="col-lg-8 text-center">
+                        <h3 style="color: #555;">No Admission Found</h3>
+                        <p class="text-muted">Admission details will appear here once the user has been admitted.</p>
+                    </div>
+                </div>
+            {% endif %}
         </div>
-      </div>
-      <div class="col-sm-6 col-md-4">
-        <div class="gallery-img-wrapper animate__animated animate__zoomIn">
-          <img src="images/2.jpg" class="img-fluid rounded shadow-sm" alt="Gallery Image 2">
+    </section>
+
+
+
+    <!-- ***** Our Classes/Online Functions Start ***** -->
+    <section class="section bg-light" id="our-classes">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 offset-lg-3">
+                    <div class="section-heading text-center">
+                        <h2>Our <em>Online Functions</em></h2>
+                        <img src="{% static 'user/assets/images/line-dec.png' %}" alt="Line Decoration" class="mb-4">
+                        <p>Explore the various services and features we offer to enhance your fitness journey.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row" id="tabs">
+                <div class="col-lg-4">
+                    <ul class="list-group">
+                        <li class="list-group-item"><a href="#tabs-3"><img src="{% static 'user/assets/images/tabs-first-icon.png' %}" alt=""> View Plans</a></li>
+                        <li class="list-group-item"><a href="#tabs-5"><img src="{% static 'user/assets/images/tabs-first-icon.png' %}" alt=""> Diet Plan</a></li>
+                        <li class="list-group-item"><a href="#tabs-1"><img src="{% static 'user/assets/images/tabs-first-icon.png' %}" alt=""> Steam Bath</a></li>
+                        <li class="list-group-item"><a href="#tabs-2"><img src="{% static 'user/assets/images/tabs-first-icon.png' %}" alt=""> Ice Bath</a></li>
+                        <li class="list-group-item"><a href="#tabs-4"><img src="{% static 'user/assets/images/tabs-first-icon.png' %}" alt=""> BMI Calculator</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-8">
+                    <section class="tabs-content">
+                        <article id="tabs-1">
+                            <img src="{% static 'user/assets/images/training-image-04.jpg' %}" class="img-fluid rounded mb-3" alt="Steam Bath">
+                            <h4>Steam Bath</h4>
+                            <p>Relax and rejuvenate with our steam bath services. Book your session today and experience ultimate relaxation.</p>
+                            <div class="main-button">
+                                <a href="{% url 'steam_book' %}" class="btn btn-primary">View Slots and Book</a>
+                            </div>
+                        </article>
+                        <article id="tabs-2">
+                            <img src="{% static 'user/assets/images/training-image-02.jpg' %}" class="img-fluid rounded mb-3" alt="Ice Bath">
+                            <h4>Ice Bath</h4>
+                            <p>Accelerate recovery and reduce muscle soreness with our professional ice bath services.</p>
+                            <div class="main-button">
+                                <a href="{% url 'ice_book' %}" class="btn btn-primary">View Slots and Book</a>
+                            </div>
+                        </article>
+                        <article id="tabs-3">
+                            <img src="{% static 'user/assets/images/training-image-01.jpg' %}" class="img-fluid rounded mb-3" alt="View Plans">
+                            <h4>View Plans</h4>
+                            <p>Choose from a wide variety of plans designed to meet your fitness needs and goals.</p>
+                            <div class="main-button">
+                                <a href="{% url 'purchase_plan' %}" class="btn btn-primary">View Plans</a>
+                            </div>
+                        </article>
+                        <article id="tabs-4">
+                            <img src="{% static 'user/assets/images/training-image-03.jpg' %}" class="img-fluid rounded mb-3" alt="BMI Calculator">
+                            <h4>BMI Calculator</h4>
+                            <p>Calculate your Body Mass Index (BMI) to better understand your health and fitness status.</p>
+                            <div class="main-button">
+                                <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#bmiCalculatorModal">Open BMI Calculator</button>
+                            </div>
+                        </article>
+                        <article id="tabs-5">
+                            <img src="{% static 'user/assets/images/diet-plans-1.jpg' %}" class="img-fluid rounded mb-3" alt="DietPlans">
+                            <h4>Diet Plans</h4>
+                            <p>You can view your Diet plan here</p>
+                            <div class="main-button">
+                                {% if diet_plan %}
+                                    <a href="{% url 'user_diet_plan_details' diet_plan.id %}" class="btn btn-primary">View Diet Plan</a>
+                                {% else %}
+                                    <p>No diet plan assigned yet.</p>
+                                {% endif %}
+                            </div>
+                            </div>
+                        </article>
+                    </section>
+                </div>
+            </div>
         </div>
-      </div>
-      <div class="col-sm-6 col-md-4">
-        <div class="gallery-img-wrapper animate__animated animate__zoomIn">
-          <img src="images/3.jpg" class="img-fluid rounded shadow-sm" alt="Gallery Image 3">
+    </section>
+
+    <!-- BMI Calculator Modal -->
+    <div class="modal fade" id="bmiCalculatorModal" tabindex="-1" role="dialog" aria-labelledby="bmiCalculatorLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="bmiCalculatorLabel">BMI Calculator</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="bmiForm">
+                        <div class="mb-3">
+                            <label for="weight" class="form-label">Weight (kg)</label>
+                            <input type="number" class="form-control" id="weight" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="height" class="form-label">Height (cm)</label>
+                            <input type="number" class="form-control" id="height" required>
+                        </div>
+                        <button type="button" class="btn btn-primary" onclick="calculateBMI()">Calculate</button>
+                    </form>
+                    <div id="bmiResult" class="mt-3 text-center"></div>
+                </div>
+            </div>
         </div>
-      </div>
-      <div class="col-sm-6 col-md-4">
-        <div class="gallery-img-wrapper animate__animated animate__zoomIn">
-          <img src="images/4.jpg" class="img-fluid rounded shadow-sm" alt="Gallery Image 4">
-        </div>
-      </div>
-      <div class="col-sm-6 col-md-4">
-        <div class="gallery-img-wrapper animate__animated animate__zoomIn">
-          <img src="images/5.jpg" class="img-fluid rounded shadow-sm" alt="Gallery Image 5">
-        </div>
-      </div>
-      <div class="col-sm-6 col-md-4">
-        <div class="gallery-img-wrapper animate__animated animate__zoomIn">
-          <img src="images/6.jpg" class="img-fluid rounded shadow-sm" alt="Gallery Image 6">
-        </div>
-      </div>
-      <div class="col-sm-6 col-md-4">
-        <div class="gallery-img-wrapper animate__animated animate__zoomIn">
-          <img src="images/7.jpeg" class="img-fluid rounded shadow-sm" alt="Gallery Image 6">
-        </div>
-      </div>
-      <div class="col-sm-6 col-md-4">
-        <div class="gallery-img-wrapper animate__animated animate__zoomIn">
-          <img src="images/8.jpeg" class="img-fluid rounded shadow-sm" alt="Gallery Image 6">
-        </div>
-      </div>
-      <div class="col-sm-6 col-md-4">
-        <div class="gallery-img-wrapper animate__animated animate__zoomIn">
-          <img src="images/9.jpeg" class="img-fluid rounded shadow-sm" alt="Gallery Image 6">
-        </div>
-      </div>
-      <div class="col-sm-6 col-md-4">
-        <div class="gallery-img-wrapper animate__animated animate__zoomIn">
-          <img src="images/10.jpeg" class="img-fluid rounded shadow-sm" alt="Gallery Image 6">
-        </div>
-      </div>
-      <div class="col-sm-6 col-md-4">
-        <div class="gallery-img-wrapper animate__animated animate__zoomIn">
-          <img src="images/11.jpeg" class="img-fluid rounded shadow-sm" alt="Gallery Image 6">
-        </div>
-      </div>
-      <div class="col-sm-6 col-md-4">
-        <div class="gallery-img-wrapper animate__animated animate__zoomIn">
-          <img src="images/12.jpeg" class="img-fluid rounded shadow-sm" alt="Gallery Image 6">
-        </div>
-      </div>
-      <div class="col-sm-6 col-md-4">
-        <div class="gallery-img-wrapper animate__animated animate__zoomIn">
-          <img src="images/13.jpeg" class="img-fluid rounded shadow-sm" alt="Gallery Image 6">
-        </div>
-      </div>
     </div>
-  </div>
-</section>
+    
+    <!-- Footer -->
+    <footer class="text-center">
+        <p>&copy; 2024 Armando. All rights reserved.</p>
+    </footer>
+    <!-- BMI Calculator Script -->
+    
 
-<!-- Directors Section -->
-<section class="project py-5 bg-white" id="directors">
-  <div class="container text-center animate__animated animate__fadeInUp">
-    <h2 class="mb-4">Our Directors</h2>
-    <p class="mb-5 text-muted">Meet the guiding forces behind Nritanjali's legacy and excellence.</p>
-    <div class="row justify-content-center">
-      <div class="col-md-5 mb-4 animate__animated animate__fadeInLeft">
-        <div class="p-4 shadow rounded bg-light h-100">
-          <img src="images/d1.jpeg" class="img-fluid rounded mb-3 shadow-sm" alt="Guru Natyacharya Kalamandalam Sathyavrathan">
-          <h5 class="mb-1">Guru Natyacharya Kalamandalam Sathyavrathan</h5>
-          <p class="text-muted mb-1">Founder and Director</p>
-          <p class="mb-2">Sree Kalalayam School of Dance and Music, Kozhikode</p>
-          <p><strong>Phone:</strong> <a href="tel:+919446400292">9446400292</a></p>
-        </div>
-      </div>
-      <div class="col-md-5 mb-4 animate__animated animate__fadeInRight">
-        <div class="p-4 shadow rounded bg-light h-100">
-          <img src="images/d2.jpeg" class="img-fluid director-img mb-3 shadow-sm" alt="Dr Anjali Sathyan">
-          <h5 class="mb-1">Dr Anjali Sathyan</h5>
-          <p class="text-muted mb-2">Co-Director</p>
-          <p class="mb-1"><strong>Founder Director</strong><br>Nritanjali School of Dance, Chathamangalam</p>
-          <p class="mb-1"><strong>Trainer at</strong><br>AG Dance and Fitness Studio, Parayanchery, Kozhikode</p>
-          <p class="mb-1">Professional dancer and choreographer with <strong>22 years</strong> of experience.</p>
-          <p class="mb-1">PG Diploma in Bharatanatyam from <strong>Kalaikaveri College, Coimbatore</strong></p>
-          <p class="mb-0">Diploma in Kuchipudi from <strong>Bangalore University</strong> under the guidance of <strong>Dr Vyjayanthi Kashi</strong></p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+   <!-- jQuery -->
+<script src="{% static 'user/assets/js/jquery-2.1.0.min.js' %}"></script>
 
-<!-- Contact Section -->
-<section class="contact py-5 bg-light animate__animated animate__fadeInUp" id="contact">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-6 col-12">
-        <h2 class="mb-4">Get in Touch</h2>
-        <p class="mb-3">We’d love to hear from you. Call or visit us for more details about our courses and performances.</p>
-        <ul class="list-unstyled">
-          <li><strong>Phone:</strong> <a href="tel:+917907693400">+91 7907 693 400</a></li>
-          <li><strong>Location:</strong> Opp. Sub Registrar Office, Chathamangalam</li>
-        </ul>
-      </div>
-      <div class="col-lg-6 col-12">
-        <div class="google-map w-100 mb-4">
-          <iframe 
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d125163.84439998401!2d75.76289252521136!3d11.380640066895669!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba643b0d80e7473%3A0x3fbb40afe7879ab6!2sNritanjali%20school%20of%20dance!5e0!3m2!1sen!2sin!4v1745153280063!5m2!1sen!2sin" 
-            width="100%" 
-            height="300" 
-            style="border:0;" 
-            allowfullscreen="" 
-            loading="lazy" 
-            referrerpolicy="no-referrer-when-downgrade">
-          </iframe>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+<!-- Bootstrap -->
+<script src="{% static 'user/assets/js/popper.js' %}"></script>
+<script src="{% static 'user/assets/js/bootstrap.min.js' %}"></script>
 
-<!-- Footer -->
-<footer class="footer py-4 bg-dark text-white animate__animated animate__fadeInUp">
-  <div class="container text-center">
-    <p class="mb-1">&copy; 2025 Nritanjali School of Dance. All Rights Reserved.</p>
-    <p class="mb-0">Crafted with passion and dedication.</p>
-  </div>
-</footer>
 
-<!-- Scripts -->
-<script src="js/jquery-3.3.1.min.js"></script>
-<script src="js/popper.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/owl.carousel.min.js"></script>
-<script src="js/smoothscroll.js"></script>
-<script src="js/custom.js"></script>
+<!-- Plugins -->
+<script src="{% static 'user/assets/js/scrollreveal.min.js' %}"></script>
+<script src="{% static 'user/assets/js/waypoints.min.js' %}"></script>
+<script src="{% static 'user/assets/js/jquery.counterup.min.js' %}"></script>
+<script src="{% static 'user/assets/js/imgfix.min.js' %}"></script>
+<script src="{% static 'user/assets/js/mixitup.js' %}"></script>
+<script src="{% static 'user/assets/js/accordions.js' %}"></script>
 
-<!-- JavaScript for Navbar Scrolling Effect -->
+<!-- Global Init -->
+<script src="{% static 'user/assets/js/custom.js' %}"></script>
+
+
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- BMI Calculator Script -->
 <script>
-  // JavaScript to add 'scrolled' class on scroll
-  window.onscroll = function() {
-    var navbar = document.querySelector("nav");
-    if (window.scrollY > 50) {
-      navbar.classList.add("scrolled");
-    } else {
-      navbar.classList.remove("scrolled");
+    function calculateBMI() {
+        const weight = parseFloat(document.getElementById('weight').value);
+        const height = parseFloat(document.getElementById('height').value) / 100; // Convert height to meters
+        if (weight && height) {
+            const bmi = (weight / (height * height)).toFixed(2);
+            let category;
+            if (bmi < 18.5) {
+                category = 'Underweight';
+            } else if (bmi >= 18.5 && bmi < 24.9) {
+                category = 'Normal weight';
+            } else if (bmi >= 25 && bmi < 29.9) {
+                category = 'Overweight';
+            } else {
+                category = 'Obese';
+            }
+            document.getElementById('bmiResult').innerHTML = `
+                <h4>Your BMI: ${bmi}</h4>
+                <p class="text-muted">Category: ${category}</p>
+            `;
+        } else {
+            document.getElementById('bmiResult').innerHTML = `
+                <p class="text-danger">Please fill in both fields correctly.</p>
+            `;
+        }
     }
-  };
+</script>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        // Attach smooth scrolling behavior with offset
+        document.querySelectorAll('.list-group-item a').forEach(function (anchor) {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1); // Get the ID without the "#"
+                const targetElement = document.getElementById(targetId);
+                
+                if (targetElement) {
+                    const headerOffset = 70; // Adjust this value based on your header height
+                    const elementPosition = targetElement.getBoundingClientRect().top + window.scrollY;
+                    const offsetPosition = elementPosition - headerOffset;
+
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    });
 </script>
 
 </body>
