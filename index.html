@@ -29,11 +29,68 @@
     .about-text, .about-image, .contact, .project, .gallery-img-wrapper, .footer {
       animation-duration: 1.5s;
     }
- 
 
+    /* Hero Video Styling */
+    .main-banner {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      overflow: hidden;
+      z-index: 0;
+    }
+
+    #bg-video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
+    }
+
+    .video-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+      padding: 2rem;
+    }
+
+    .caption h1,
+    .caption p {
+      color: #fff;
+      text-shadow: 1px 1px 4px #000;
+    }
   </style>
 </head>
 <body>
+
+<!-- Hero Banner with Video Background -->
+<div class="main-banner" id="top">
+  <video autoplay muted loop playsinline id="bg-video" poster="images/1.jpg">
+    <source src="images/dance.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
+
+  <div class="video-overlay header-text">
+    <div class="caption">
+      <h1 class="mb-4" style="font-family: 'Georgia', serif; font-size: 2.5rem;">
+        Welcome to <strong>Nritanjali School of Dance</strong>
+      </h1>
+      <p class="text-muted" style="font-family: 'Georgia', serif; font-size: 1.1rem;">
+        Celebrating Tradition through Movement and Grace.
+      </p>
+    </div>
+  </div>
+</div>
 
 <!-- Navigation -->
 <nav class="navbar navbar-expand-sm navbar-light shadow-sm animate__animated animate__fadeInDown">
@@ -80,6 +137,7 @@
     <h2 class="mb-4">Our Courses</h2>
     <p class="mb-5 text-muted">Explore a wide range of classical and modern art forms suitable for all ages and skill levels.</p>
     <div class="row">
+      <!-- Each course block -->
       <div class="col-md-4 mb-4 animate__animated animate__fadeInUp">
         <div class="p-4 shadow rounded bg-white">
           <h5>Bharatanatyam</h5>
@@ -166,7 +224,6 @@
     <h2 class="mb-4">Our Directors</h2>
     <p class="mb-5 text-muted">Meet the guiding forces behind Nritanjali's legacy and excellence.</p>
     <div class="row justify-content-center">
-      <!-- Director 1 -->
       <div class="col-md-5 mb-4 animate__animated animate__fadeInLeft">
         <div class="p-4 shadow rounded bg-light h-100">
           <img src="images/d1.jpeg" class="img-fluid rounded mb-3 shadow-sm" alt="Guru Natyacharya Kalamandalam Sathyavrathan">
@@ -176,7 +233,6 @@
           <p><strong>Phone:</strong> <a href="tel:+919446400292">9446400292</a></p>
         </div>
       </div>
-      <!-- Director 2 -->
       <div class="col-md-5 mb-4 animate__animated animate__fadeInRight">
         <div class="p-4 shadow rounded bg-light h-100">
           <img src="images/d2.jpeg" class="img-fluid director-img mb-3 shadow-sm" alt="Dr Anjali Sathyan">
@@ -189,12 +245,11 @@
           <p class="mb-0">Diploma in Kuchipudi from <strong>Bangalore University</strong> under the guidance of <strong>Dr Vyjayanthi Kashi</strong></p>
         </div>
       </div>
-      
     </div>
   </div>
 </section>
 
-<!-- Contact -->
+<!-- Contact Section -->
 <section class="contact py-5 bg-light animate__animated animate__fadeInUp" id="contact">
   <div class="container">
     <div class="row">
